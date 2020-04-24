@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>490</x>
+      <y>140</y>
+      <w>518</w>
+      <h>742</h>
+    </coordinates>
+    <panel_attributes>Mock
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>336</x>
+      <y>406</y>
+      <w>84</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Testeur</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>672</x>
+      <y>434</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Envoyer les règles</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>434</y>
+      <w>294</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>658</x>
+      <y>280</y>
+      <w>196</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Faire des requêtes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>616</x>
+      <y>658</y>
+      <w>280</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Passer en mode attaque
+de sécurité</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>448</y>
+      <w>238</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;150.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1050</x>
+      <y>448</y>
+      <w>182</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Objet connecté
+valign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>294</y>
+      <w>238</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;150.0;130.0</additional_attributes>
+  </element>
+</diagram>

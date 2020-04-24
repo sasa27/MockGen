@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>837</x>
+      <y>423</y>
+      <w>171</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>OutInRule
+--
+- timeout: long
+- repeat: int
+- interval: long
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>306</y>
+      <w>171</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>InOutRule
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1098</x>
+      <y>252</y>
+      <w>216</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Request
+--
+- method: String
+- path: String
+- headers: Map&lt;String, String&gt;
+- body: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1098</x>
+      <y>144</y>
+      <w>216</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Response
+--
+- status: int
+- headers: Map&lt;String, String&gt;
+- body: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>27</x>
+      <y>54</y>
+      <w>270</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>WebService
+--
+- handlers: Map&lt;String, InOutHandler&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>711</x>
+      <y>90</y>
+      <w>621</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>486</y>
+      <w>225</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>OutputRequest: Runnable
+--
+- rule: Rule
+--
++ run()
+- requestAsync(request: HttpRequest)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>90</y>
+      <w>180</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Loader
+--
++ load(str: String): List&lt;Rule&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>279</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>JsonLoader
+--
+--
++ load(json: String): List&lt;Rule&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>153</y>
+      <w>153</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;110.0;10.0;110.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>477</x>
+      <y>279</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>YamlLoader
+--
+--
++ load(yaml: String): List&lt;Rule&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>153</y>
+      <w>153</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;150.0;110.0;150.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>108</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>144</y>
+      <w>162</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+- requests
+m1=*</panel_attributes>
+    <additional_attributes>160.0;430.0;10.0;430.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>846</x>
+      <y>180</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/Rule/
+--
++ request: Request
++ response: Response
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>999</x>
+      <y>180</y>
+      <w>117</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- response</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>999</x>
+      <y>243</y>
+      <w>117</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- request</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>855</x>
+      <y>261</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>63</y>
+      <w>693</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+- rules
+m1=*
+layer=2</panel_attributes>
+    <additional_attributes>710.0;130.0;710.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>585</y>
+      <w>180</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Attacker
+--
+- scripts: List&lt;String&gt;
+- rules: List&lt;Rule&gt;
+- attackRules: List&lt;Rule&gt;
+--
++ attack()
++ XSSAttacks()
++ getPaths(): List&lt;String&gt;
++ httpFloodAttack()
++ robustnessAttacks()
+- XSSQueryParams()
+- XSSHeaders(script: String)
+- XSSBody(script: String)
+- generateBigFile()
+- readFile(): String
+- verbNotExist()
+- emptyVerb()
+- specialChar()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>909</x>
+      <y>261</y>
+      <w>27</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>144</y>
+      <w>27</w>
+      <h>459</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;490.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>378</y>
+      <w>225</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>InOutHandler
+--
+- rule: Rule
+--
++ handle()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>144</y>
+      <w>135</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+- inputHandlers
+m1=*</panel_attributes>
+    <additional_attributes>130.0;290.0;10.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>369</y>
+      <w>261</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- rule
+</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>477</y>
+      <w>360</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- rule
+</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
